@@ -1,0 +1,183 @@
+body {
+    background-color: rgb(255, 241, 244);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Style for the search bar */
+#search-bar {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    bottom: 15px;
+}
+
+/* Style for the city's input box */
+#city {
+    width: 180px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+/* Style for the country's input box */
+#country {
+    width: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+/* Style for the search button */
+button {
+    background-color: rgb(228, 136, 151);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px;
+    font-size: 15px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    transition: background-color 0.3s ease; 
+    background-color: rgb(241, 147, 163);
+
+}
+
+button:active {
+    background-color: rgb(214, 123, 138);
+}
+
+/* Style for the main container that holds all the items within weather-display */
+#container {
+    background-color: rgb(255, 216, 222);
+    border-radius: 15px;
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 150px; 
+    box-shadow: 10px 10px 28px -4px rgba(235,138,156,1);
+    text-align: center;
+    padding: 50px;
+}
+
+#weather-icon {
+    width: 200px;
+    height: 200px;
+    display: none;
+    justify-content: center;
+    margin: auto;
+}
+
+#top-section {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.sections #city-sect {
+    font-size: 25px; 
+    font-weight: bold; 
+    position: relative;
+    padding: 0; 
+    top: 5px;
+}
+
+/* Style for the temperature */
+.sections #temperature-display {
+    font-size: 20px; 
+    color: rgb(228, 136, 151); 
+    font-weight: bold;
+    position: relative;
+    bottom: 18px; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the weather description */
+.sections #weather-description {
+    font-size: 15px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white; 
+    position: relative;
+    bottom: 25px;
+}
+
+#bottom-section {
+    margin-top: 8px;
+}
+
+#hourly-forecast {
+    background-color: rgba(255, 255, 255);
+    border-radius: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-item {
+    background-color: rgb(255, 255, 255);
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: rgba(235,138,156,1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.hourly-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+/* Styling the hour (24-hour format) */
+.hourly-item div:nth-child(1) {
+    font-size: 16px;
+    margin-bottom: 5px; 
+    color: rgb(0, 0, 0);
+}
+
+/* Styling the temperature */
+.hourly-item div:nth-child(3) {
+    font-size: 14px;
+    color: rgba(235,138,156,1);
+}
+
+#credit {
+    font-size: 10px;
+    font-style: italic;
+    color: rgba(235,138,156,1);
+}
+
+a:link {
+    color: rgba(235,138,156,1);
+}
+
+a:visited {
+    color: rgba(235,138,156,1);
+}
