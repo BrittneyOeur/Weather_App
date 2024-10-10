@@ -68,11 +68,12 @@ function displayWeather(data) {
         const cityName = data.name;
         const stateName = data.sys.country;
         const temperature = Math.round((data.main.temp - 273.15) * (9/5) + 32); // Converts the temperature from Kelvin to Fahrenheit
+        const cel = Math.round(data.main.temp - 273.15);
         const description = data.weather[0].description;
         const iconCode = data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
 
-        tempWeatherDisplay.innerHTML = `<p>${temperature} °F</p>`;
+        tempWeatherDisplay.innerHTML = `<p>${temperature} °F | ${cel} °C</p>`;
         citySect.innerHTML = `<p>${cityName}, ${stateName}</p>`;
         weatherDiscription.innerHTML = `<p>${description}</p>`;
         weatherIcon.src = iconUrl;
@@ -104,6 +105,7 @@ function displayHourlyForecast(hourlyData) {
         const dateTime = new Date(item.dt * 1000);  // Converts it into a readable hour
         const hour = dateTime.getHours();   // Extracts type hour of the time
         const temperature = Math.round((item.main.temp - 273.15) * (9/5) + 32); // Converts the temperature from Kelvin to Fahrenheit
+        const cel = Math.round(item.main.temp - 273.15);
         const iconCode = item.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
 
@@ -113,6 +115,7 @@ function displayHourlyForecast(hourlyData) {
                 <div>${hour}:00</div>
                 <img src="${iconUrl}" alt="${item.weather[0].description}"/>
                 <div>${temperature} °F</div>
+                <div>${cel} °C</div>
             </div>
         `;
 
